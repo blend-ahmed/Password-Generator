@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Password Generator</title>
+        <link rel="icon" type="image/x-icon" href="/images/lock-icon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main class="wrapper">
+            <h1>Password Generator</h1>
+            <div class="container">
+                <div id="output">
+                    <div id="output-password"></div>
+                    <div id="output-btns">
+                        <button id="copy-btn">COPY</button>
+                        <button id="generate-btn">GENERATE</button>
+                    </div>
+                </div>
+
+                <div id="customization">
+                    <div id="checkboxes">
+                        <div class="checkbox">
+                            <input id="numbers-checkbox" type="checkbox" name="numbers" checked>
+                            <label for="numbers-checkbox">Numbers</label>
+                        </div>
+                        <div class="checkbox"> 
+                            <input id="lowercase-checkbox" type="checkbox" checked>
+                            <label for="lowercase-checkbox">Lowercase Letters</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="uppercase-checkbox" type="checkbox" checked>
+                            <label for="uppercase-checkbox">Uppercase Letters</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="special-checkbox" type="checkbox" checked>
+                            <label for="special-checkbox">Special Characters</label>
+                        </div>
+                    </div>
+                    <div id="length">
+                        <input id="length-number" type="number" min="8" max="32" value="12">
+                        <input id="length-range" type="range" min="8" max="32" value="12">
+                        <label for="length-range">Length</label>
+                    </div>
+                </div>
+                <div id="strength-meter">
+                    <div id="strength-bar"></div>
+                </div>
+                <p id="strength-text">Strength: </p>
+            </div>
+        </main>
+    <script src="https://cdn.jsdelivr.net/npm/zxcvbn@4.4.2/dist/zxcvbn.js"></script>
+    <script src="index.js"></script>
+    </body>
+</html>
